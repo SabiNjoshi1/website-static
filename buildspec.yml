@@ -11,11 +11,15 @@ phases:
     commands:
       - echo Build started on `date`
       - cp index.html /var/www/html
+      - cp -r css /var/www/html
+      - cp -r images /var/www/html
+      - cp -r js /var/www/html
 
   post_build:
     commands:
       - echo Configuring NGINX
+      - sudo service nginx restart
 
 artifacts:
   files:
-  - /**/*
+    - '**/*'
