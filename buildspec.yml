@@ -1,25 +1,25 @@
-version: 0.2
+# version: 0.2
 
-phases:
-  install:
-    commands:
-      - echo Installing NGINX
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
+# phases:
+#   install:
+#     commands:
+#       - echo Installing NGINX
+#       - sudo apt-get update
+#       - sudo apt-get install nginx -y
 
-  build:
-    commands:
-      - echo Build started on `date`
-      - cp index.html /var/www/html
-      - cp -r css /var/www/html
-      - cp -r images /var/www/html
-      - cp -r js /var/www/html
+#   build:
+#     commands:
+#       - echo Build started on `date`
+#       - cp index.html /var/www/html
+#       - cp -r css /var/www/html
+#       - cp -r images /var/www/html
+#       - cp -r js /var/www/html
 
-  post_build:
-    commands:
-      - echo Configuring NGINX
-      - sudo service nginx restart
+#   post_build:
+#     commands:
+#       - echo Configuring NGINX
+#       - sudo service nginx restart
 
-artifacts:
-  files:
-    - '**/*'
+# artifacts:
+#   files:
+#     - '**/*'
